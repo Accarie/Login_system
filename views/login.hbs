@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup and login backend</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+     <nav>
+    <div class="logo">Tutor Jones</div>
+    <div class="menu>">
+      <a href="/Home">Home</a>
+      <a href="/register">Register</a>
+      <a href="/">login</a>
+      <a href="/profile  ">Profile</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="text">User login</div>
+     {{#if msg}}
+    <p class="{{msg_type}}">{{msg}}</p>
+    {{/if}}
+
+    <form action="/auth/login" method="post">
+        <div class="data">
+            <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div class="data">
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="forgot-pass">
+            <a href="#">Forgot password?</a>
+        </div>
+        <div class="btn">
+            <button type="submit">login</button>
+        </div>
+        <div class="sign-up">
+            Not a member ? <a href="/register">Signup</a>
+        </div>
+    </form>
+  </div> 
+</body>
+</html>

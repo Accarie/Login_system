@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup and login backend</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+     <nav>
+    <div class="logo">Tutor Jones</div>
+    <div class="menu>">
+      <a href="/Home">Home</a>
+      <a href="/registration">Register</a>
+      <a href="/">login</a>
+      <a href="/profile  ">Profile</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="text">Registration</div>
+    {{#if msg}} 
+    <p class="{{msg_type}}">{{msg}}</p>
+    {{/if}}
+    <form action="/auth/register" method="post">
+        <div class="data">
+            <input type="text" name="name" id="name" placeholder="Full names">
+        </div>
+        <div class="data">
+            <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div class="data">
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="data">
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password">
+        </div>
+        <div class="btn">
+            <button type="submit">register</button>
+        </div>
+        <div class="sign-up">
+            Already a member ? <a href="/">Login</a>
+        </div>
+    </form>
+  </div> 

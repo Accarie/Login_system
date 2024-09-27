@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup and login backend</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    nav .menu a{
+    margin: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #5199E4;
+      }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Tutor Jones</div>
+    <div class="menu>">
+      <a href="/Home">Home</a>
+      <a href="/register">Register</a>
+      <a href="/">login</a>
+      <a href="/profile  ">Profile</a>
+      <a href="/auth/logout">Logout</a>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <h2>User profile</h2>
+    <img src="/images/cyu.png" />
+    <h3>Names:{{user.name}}</h3>
+    <h3>Email:{{user.email}}</h3>
+  </div> 
+</body>
+</html> 
